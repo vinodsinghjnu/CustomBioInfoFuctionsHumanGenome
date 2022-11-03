@@ -1,0 +1,20 @@
+Package: CustomBioInfoFuctionsHumanGenome
+Type: Package
+Title: Frequently used customised BioInfomatics Fuctions to analyse HumanGenome
+Version: 0.1.0
+Date: 2022-30-10
+Author: Vinod Singh
+Maintainer: Vinod Singh <vinod.acear@gmail.com>
+URL: https://github.com/vinodsinghjnu/CustomBioInfoFuctionsHumanGenome
+BugReports: https://github.com/vinodsinghjnu/CustomBioInfoFuctionsHumanGenome/issues
+Description: This is my personal package that have custom functions to process human genome.
+biocViews:
+Depends: R (>= 4.1.0), dplyr, R.utils, DECIPHER, liftOver,rtracklayer, reticulate, Repitools, BSgenome.Hsapiens.UCSC.hg19, BSgenome.Hsapiens.UCSC.hg38,Gviz, tibble, tidyselect
+Suggests: gm, knitr
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.2.1
+VignetteBuilder: knitr
+Language: en-US
+Roxygen: list(markdown = TRUE)
