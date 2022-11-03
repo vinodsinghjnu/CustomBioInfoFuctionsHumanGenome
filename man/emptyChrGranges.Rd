@@ -2,7 +2,7 @@
 % Please edit documentation in R/emptyChrGranges.R
 \name{emptyChrGranges}
 \alias{emptyChrGranges}
-\title{Create empty charomosome GenomicRange object for a given human genome assembly}
+\title{Create empty chromosome GenomicRange object for a given human genome assembly}
 \usage{
 emptyChrGranges(assmblyName)
 }
@@ -10,10 +10,10 @@ emptyChrGranges(assmblyName)
 \item{assmblyName}{hg19 or hg38}
 }
 \value{
-empty charomosome GenomicRange
+empty chromosome GenomicRange
 }
 \description{
-Create empty charomosome GenomicRange object for a given human genome assembly (for standard chromosomes )
+Create empty chromosome GenomicRange object for a given human genome assembly (for standard chromosomes )
 }
 \examples{
 hg_19_Chr.gr=emptyChrGranges('hg19')

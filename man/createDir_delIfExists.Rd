@@ -7,7 +7,7 @@
 createDir_delIfExists(dir)
 }
 \arguments{
-\item{dir}{Name of dir to be created}
+\item{dir}{Name of the dir to be created}
 }
 \value{
 dir created in the current diretory

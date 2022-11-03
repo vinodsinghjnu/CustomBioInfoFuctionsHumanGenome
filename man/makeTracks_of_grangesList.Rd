@@ -21,7 +21,7 @@ makeTracks_of_grangesList(
 \item{if_plain}{: ´TRUE´ then it will return only tracks of given genomic range. Default: FALSE: Tracks of the given chromosomes will also be returned.}
 }
 \value{
-a vector of oligo-nucleotide counts
+list of tracks for input list of genomic ranges objects.
 }
 \description{
 Make tracks from genomic ranges objects list.

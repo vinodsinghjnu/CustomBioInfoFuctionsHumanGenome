@@ -5,7 +5,7 @@
 #' @param location a list of genomic location with fields ´chr´, ´from´ and ´to´. Optional: Must be given if you choose ´if_plain=FALSE´
 #' @param assmblyName human genome assembly name (hg19 or hg38). Default: hg19
 #' @param if_plain : ´TRUE´ then it will return only tracks of given genomic range. Default: FALSE: Tracks of the given chromosomes will also be returned.
-#' @return a vector of oligo-nucleotide counts
+#' @return list of tracks for input list of genomic ranges objects.
 #' @export
 #' @examples
 #'
@@ -20,7 +20,7 @@
 #'
 #' gr1 <- GRanges(seqnames = "chr1", strand = c("+", "-", "+"),  ranges = IRanges(start = c(1,110,105), end = c(100, 120, 150 )))
 #' gr2 <- GRanges(seqnames = "chr1", strand = c("+", "-", "+", "+"),  ranges = IRanges(start = c(1,12,60, 105), end = c(25, 50, 70, 115 )))
-#'plotTracks(makeTracks_of_grangesList(list(gr1=gr1,gr2=gr2), if_plain=TRUE), shape="box")
+#' plotTracks(makeTracks_of_grangesList(list(gr1=gr1,gr2=gr2), if_plain=TRUE), shape="box")
 #'
 makeTracks_of_grangesList=function(grlist, location, assmblyName='hg19',if_plain=FALSE){
   if(if_plain==TRUE & missing(location)){

@@ -3,7 +3,7 @@
 #' @description Percent overlap of a genomic range with other
 #' @param FirstContext GenomicRange object. (query: overlapped)
 #' @param SecondContext GenomicRange object. (overlapped to)
-#' @return empty chromosome GenomicRange
+#' @return Percent overlap of first genomic range to second genomic range
 #' @export
 #' @examples
 #' gr1 <- GRanges(seqnames = "chr1", strand = c("+", "-", "+"),  ranges = IRanges(start = c(1,110,105), end = c(100, 120, 150 )))

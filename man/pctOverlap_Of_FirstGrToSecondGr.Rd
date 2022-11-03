@@ -12,7 +12,7 @@ pctOverlap_Of_FirstGrToSecondGr(FirstContext, SecondContext)
 \item{SecondContext}{GenomicRange object. (overlapped to)}
 }
 \value{
-empty chromosome GenomicRange
+Percent overlap of first genomic range to second genomic range
 }
 \description{
 Percent overlap of a genomic range with other

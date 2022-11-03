@@ -1,7 +1,7 @@
 #' @title  create a directory and delete if it already exists
 #'
 #' @description create a directory and delete if it already exists
-#' @param dir Name of dir to be created
+#' @param dir Name of the dir to be created
 #' @return dir created in the current diretory
 #' @export
 #' @examples

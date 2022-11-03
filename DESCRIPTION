@@ -17,3 +17,4 @@ LazyData: true
 RoxygenNote: 7.2.1
 VignetteBuilder: knitr
 Language: en-US
+Roxygen: list(markdown = TRUE)

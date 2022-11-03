@@ -1,4 +1,7 @@
-url: ~
+title: CustomBioInfoFuctionsHumanGenome
+url: https://github.com/vinodsinghjnu/CustomBioInfoFuctionsHumanGenome
 template:
-  bootstrap: 5
+  params:
+    bootswatch: flatly
+    ganalytics: UA-12345678-0
 

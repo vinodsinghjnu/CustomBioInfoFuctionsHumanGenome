@@ -1,8 +1,8 @@
-#' @title  Create empty charomosome GenomicRange object for a given human genome assembly
+#' @title  Create empty chromosome GenomicRange object for a given human genome assembly
 #'
-#' @description Create empty charomosome GenomicRange object for a given human genome assembly (for standard chromosomes )
+#' @description Create empty chromosome GenomicRange object for a given human genome assembly (for standard chromosomes )
 #' @param assmblyName hg19 or hg38
-#' @return empty charomosome GenomicRange
+#' @return empty chromosome GenomicRange
 #' @export
 #' @examples
 #' hg_19_Chr.gr=emptyChrGranges('hg19')
