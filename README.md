@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  word_document: default
+---
 ``` r
 library(IRanges); library(GenomicRanges); library(CustomBioInfoFuctionsHumanGenome)
 ```
@@ -424,8 +429,59 @@ oligonucs.Counts
     ##  451366  706620  677442  533465   76306  766871  677442  496828  630048  698085 
     ##     TTA     TTC     TTG     TTT 
     ##  727231  685228  649772 1325123
+    
+    
+### 3.9 Gbin_ByCGcnts
 
-### 3.9 makeTracks_of_grangesList
+#### **Description**
+
+Create a GenomicRange of genomic blocks of user specified CpG counts. (human genome)
+
+#### **Usage**
+
+`Gbin_ByCGcnts(CGs_perBin=100, assmblyName='hg19' )`
+
+#### **Arguments**
+
+-   `assmblyName`: hg19 or hg38 or t2t
+-   `CGs_perBin`: CpG counts in a genomic block/bin. (even number)
+    oligo-nucleotides has to be counted.
+-   `addSeq`: if sequence of the bin is required (Default: FALSE)
+
+#### **Details**
+
+Creates a GenomicRange of genomic blocks of user specified CpG counts. (human genome)
+
+#### **Value**
+
+GenomicRanges object of bins with user specified CpG counts
+
+#### **Examples**
+
+``` r
+hg_19_CpGBins.gr=Gbin_ByCGcnts(CGs_perBin=100, assmblyName='hg19' )
+
+hg_19_CpGBins.gr
+```
+
+    # GRanges object with 564328 ranges and 2 metadata columns:
+    #           seqnames            ranges strand |                     seq CpG_counts
+    #              <Rle>         <IRanges>  <Rle> |          <DNAStringSet>  <numeric>
+    #       [1]     chr1       10469-10761      * | CGCGGTACCC...CGCGCCGGCG        100
+    #       [2]     chr1       10766-11094      * | CGCAGAGAGG...CGTGCACGCG        100
+    #       [3]     chr1       11105-12758      * | CGTCACGGTG...AGTGGCGTCG        100
+    #       [4]     chr1       12773-15190      * | CGGGGCCGGC...CCCAGCACCG        100
+    #       [5]     chr1       15207-17585      * | CGGCTGTTTG...ACACCCCTCG        100
+    #       ...      ...               ...    ... .                     ...        ...
+    #  [564324]     chrY 59355793-59357713      * | CGACCTGGGC...GAGAGCCACG        100
+    #  [564325]     chrY 59357736-59360397      * | CGGATCTCTT...TCACAGCCCG        100
+    #  [564326]     chrY 59360409-59361720      * | CGATGGCAGC...CCAACCCCCG        100
+    #  [564327]     chrY 59361723-59361953      * | CGTAGGCGTG...GCGCGGCGCG        100
+    #  [564328]     chrY 59361962-59362400      * | CGCCTGCGCC...GCGGAAAACG        100
+    #  -------
+    #  seqinfo: 24 sequences from hg19 genome
+
+### 3.10 makeTracks_of_grangesList
 
 #### **Description**
 
@@ -433,15 +489,13 @@ make tracks list from GenomicRange lists.
 
 #### **Usage**
 
-`context_oligonucsCounts(contextGr=hg_38_gr, oligoType='trinucs', ignore.strand=FALSE, assmblyName='hg38')`
+`makeTracks_of_grangesList(grlist, location, assmblyName)`
 
 #### **Arguments**
 
--   `contextGr`: GenomicRange object of the genomic context within which
+-   `grlist`: GenomicRange object of the genomic context within which
     oligo-nucleotides has to be counted.
--   `oligoType`: dinucs or trinucs or tetranucs
--   `ignore.strand`: genomic context strand information should be
-    considered. Default: FALSE
+-   `location`: location on the chromosome as List. ie., list(chr='chr7',from=26700000, to=26750000) 
 -   `assmblyName`: human genome assembly name (hg19 or hg38). Default:
     hg19
 
@@ -465,7 +519,6 @@ tracks=makeTracks_of_grangesList(grlist=mygrlist, location=loc, assmblyName='hg1
 plotTracks(tracks, from = loc$from, to = loc$to)
 ```
 
-![](/private/var/folders/41/drb9nmvn5tv13h0p314tzs380000gn/T/RtmpQ20kgN/preview-152e63ed44c01.dir/CustomBioInfoFuctionsHumanGenome_files/figure-markdown_github/unnamed-chunk-10-1.png)
 
 ``` r
 # example 2, only genomic ranges no annotation
@@ -476,4 +529,3 @@ gr2 <- GRanges(seqnames = "chr1", strand = c("+", "-", "+", "+"),  ranges = IRan
 plotTracks(makeTracks_of_grangesList(list(gr1=gr1,gr2=gr2), if_plain=TRUE), shape="box")
 ```
 
-![](/private/var/folders/41/drb9nmvn5tv13h0p314tzs380000gn/T/RtmpQ20kgN/preview-152e63ed44c01.dir/CustomBioInfoFuctionsHumanGenome_files/figure-markdown_github/unnamed-chunk-11-1.png)

@@ -7,7 +7,7 @@
 getGbins(assmblyName, binSize = 1000)
 }
 \arguments{
-\item{assmblyName}{hg19 or hg38}
+\item{assmblyName}{hg19 or hg38 or t2t}
 
 \item{binSize}{size of the genomic block}
 }

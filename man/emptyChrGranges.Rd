@@ -7,7 +7,7 @@
 emptyChrGranges(assmblyName)
 }
 \arguments{
-\item{assmblyName}{hg19 or hg38}
+\item{assmblyName}{hg19 or hg38 or t2t}
 }
 \value{
 empty chromosome GenomicRange

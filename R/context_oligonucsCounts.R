@@ -4,7 +4,7 @@
 #' @param contextGr GenomicRange object of the genomic context within which oligo-nucleotides has to be counted.
 #' @param oligoType dinucs or trinucs or tetranucs
 #' @param ignore.strand genomic context strand information should be considered. Default: FALSE
-#' @param assmblyName human genome assembly name (hg19 or hg38). Default: hg19
+#' @param assmblyName human genome assembly name (hg19 or hg38 or t2t). Default: hg19
 #' @return a vector of oligo-nucleotide counts
 #' @export
 #' @examples
@@ -21,6 +21,10 @@ context_oligonucsCounts=function(contextGr, oligoType, ignore.strand=FALSE,  ass
   }else if(assmblyName=='hg38'){
     library(BSgenome.Hsapiens.UCSC.hg38)
     BS_genome=BSgenome.Hsapiens.UCSC.hg38
+  }else if(assmblyName=='t2t'){
+    library(BSgenome.Hsapiens.NCBI.T2T.CHM13v2.0)
+    BS_genome=BSgenome.Hsapiens.NCBI.T2T.CHM13v2.0
+    seqlevelsStyle(BS_genome) <- "UCSC"
   }
 
   if(ignore.strand==FALSE)

@@ -9,7 +9,7 @@ addGrInformation(gr.f, assmblyName)
 \arguments{
 \item{gr.f}{A genomic range.}
 
-\item{assmblyName}{human genome assembly name i.e., hg19 or hg38.}
+\item{assmblyName}{human genome assembly name i.e., hg19 or hg38 or t2t.}
 }
 \value{
 Input genomic ranges with added assembly information.
