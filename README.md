@@ -192,6 +192,7 @@ Create GenomicRanges object of given the bin size for human genome.
 
 -   `assmblyName`: hg19 or hg38
 -   `binSize`: size of the genomic block
+-   `chrName`: name of the chromosome, if not given then all chromosomes are considered (UCSC format)
 
 #### **Details**
 

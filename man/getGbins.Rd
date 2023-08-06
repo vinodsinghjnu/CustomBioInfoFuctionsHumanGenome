@@ -4,12 +4,14 @@
 \alias{getGbins}
 \title{Create GenomicRanges object of given the bin size  for human genome.}
 \usage{
-getGbins(assmblyName, binSize = 1000)
+getGbins(assmblyName, binSize = 1000, chrName = chrName)
 }
 \arguments{
 \item{assmblyName}{hg19 or hg38 or t2t}
 
 \item{binSize}{size of the genomic block}
+
+\item{chrName}{name of the chromosome, if not given then all chromosomes are considered (optional)}
 }
 \value{
 GenomicRanges object of given the bin size
