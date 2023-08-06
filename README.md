@@ -480,8 +480,39 @@ hg_19_CpGBins.gr
     #  [564328]     chrY 59361962-59362400      * | CGCCTGCGCC...GCGGAAAACG        100
     #  -------
     #  seqinfo: 24 sequences from hg19 genome
+    
+    
+### 3.10 largeVariables
 
-### 3.10 makeTracks_of_grangesList
+#### **Description**
+
+Memory usage of large variable in workspace
+
+#### **Usage**
+
+`largeVariables(n)`
+
+#### **Arguments**
+
+-   `n`: Number of top memory consuming variables required
+
+#### **Details**
+
+Memory of variable in decreasing order
+
+#### **Value**
+
+DataFrame of top memory variables
+
+#### **Examples**
+
+``` r
+largeVariables(n=5)
+
+```
+
+
+### 3.11 makeTracks_of_grangesList
 
 #### **Description**
 
