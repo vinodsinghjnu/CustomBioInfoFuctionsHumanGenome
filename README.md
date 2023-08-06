@@ -489,6 +489,7 @@ tracks=makeTracks_of_grangesList(grlist=mygrlist, location=loc, assmblyName='hg1
 plotTracks(tracks, from = loc$from, to = loc$to)
 ```
 
+![](inst/extdata/trackplot1.png)
 
 ``` r
 # example 2, only genomic ranges no annotation
@@ -499,3 +500,4 @@ gr2 <- GRanges(seqnames = "chr1", strand = c("+", "-", "+", "+"),  ranges = IRan
 plotTracks(makeTracks_of_grangesList(list(gr1=gr1,gr2=gr2), if_plain=TRUE), shape="box")
 ```
 
+![](inst/extdata/trackplot2.png)
