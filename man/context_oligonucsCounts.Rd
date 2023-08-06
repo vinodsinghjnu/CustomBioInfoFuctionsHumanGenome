@@ -18,7 +18,7 @@ context_oligonucsCounts(
 
 \item{ignore.strand}{genomic context strand information should be considered. Default: FALSE}
 
-\item{assmblyName}{human genome assembly name (hg19 or hg38). Default: hg19}
+\item{assmblyName}{human genome assembly name (hg19 or hg38 or t2t). Default: hg19}
 }
 \value{
 a vector of oligo-nucleotide counts

@@ -81,69 +81,8 @@ outGr
     ##   -------
     ##   seqinfo: 24 sequences from 2 genomes (hg19, NA)
 
-### 3.2 liftoverGR_hg38ToHg19
 
-#### **Description**
-
-Liftover genomic range from hg38 to hg19 (Human genome)
-
-#### **Usage**
-
-`liftoverGR_hg38ToHg19(gr.f=hg_38_gr)`
-
-#### **Arguments**
-
--   `gr.f`: A genomic range.
-
-#### **Details**
-
-Liftover genomic range from hg38 to hg19 (Human genome) and will also
-add hg19 assembly information to the output genomic ranges. (filter out
-non-standard chromosomes)
-
-#### **Value**
-
-Liftover of hg38 genomic loci to hg19 genomic loci
-
-#### **Examples**
-
-``` r
-data(hg_38_gr)
-
-outGr_h19=liftoverGR_hg38ToHg19(gr.f=hg_38_gr)
-```
-
-    ## Discarding unchained sequences: chr3_KI270895v1_alt, chr3_ML143343v1_alt, chr5_KI270897v1_alt, chr6_GL000250v2_alt, chr6_GL000251v2_alt, chr6_GL000252v2_alt, chr6_GL000253v2_alt, chr6_GL000254v2_alt, chr6_GL000255v2_alt, chr8_KZ208915v1_fix, chr11_KI270832v1_alt, chr11_KI270903v1_alt, chr11_KN538368v1_alt, chr11_ML143358v1_fix, chr13_KI270842v1_alt, chr14_KZ208920v1_fix, chr16_ML143373v1_fix, chr17_KI270861v1_alt, chr17_ML143374v1_fix, chr19_GL949746v1_alt, chr19_KI270914v1_alt, chr19_KI270917v1_alt, chr19_KQ458386v1_fix, chr19_KV575252v1_alt, chr22_KI270879v1_alt
-
-    ## [1] "bad GRs"
-    ## GRanges object with 0 ranges and 2 metadata columns:
-    ##    seqnames    ranges strand |     tx_id     tx_name
-    ##       <Rle> <IRanges>  <Rle> | <integer> <character>
-    ##   -------
-    ##   seqinfo: 24 sequences from hg19 genome
-
-``` r
-outGr_h19
-```
-
-    ## GRanges object with 499 ranges and 2 metadata columns:
-    ##         seqnames              ranges strand |     tx_id           tx_name
-    ##            <Rle>           <IRanges>  <Rle> | <integer>       <character>
-    ##     [1]    chr12   76762999-76765642      - |    152797 ENST00000548485.1
-    ##     [2]     chr2 220115916-220118638      - |     38770 ENST00000462806.5
-    ##     [3]     chr5 149493402-149535408      - |     75589 ENST00000261799.9
-    ##     [4]    chr13   41948611-41949948      + |    155908 ENST00000469708.1
-    ##     [5]    chr17   56225745-56236946      + |    193565 ENST00000268912.6
-    ##     ...      ...                 ...    ... .       ...               ...
-    ##   [495]     chr2 111878491-111886421      + |     25697 ENST00000337565.9
-    ##   [496]     chrX   73422518-73513378      - |    242084 ENST00000423992.3
-    ##   [497]    chr11     3532789-3542116      + |    127807 ENST00000656923.1
-    ##   [498]     chrX   16737735-16783463      + |    236514 ENST00000380155.4
-    ##   [499]    chr14 101491901-101491988      + |    163919 ENST00000408818.3
-    ##   -------
-    ##   seqinfo: 24 sequences from hg19 genome
-
-### 3.3 pctOverlap_Of_FirstGrToSecondGr
+### 3.2 pctOverlap_Of_FirstGrToSecondGr
 
 #### **Description**
 
@@ -178,7 +117,7 @@ pctOverlap_Of_FirstGrToSecondGr(FirstContext=gr1, SecondContext=gr2)
 
     ## [1] 45.85987
 
-### 3.4 emptyChrGranges
+### 3.3 emptyChrGranges
 
 #### **Description**
 
@@ -239,7 +178,7 @@ hg_19_Chr.gr
     ##   -------
     ##   seqinfo: 24 sequences from hg19 genome
 
-### 3.5 getGbins
+### 3.4 getGbins
 
 #### **Description**
 
@@ -298,7 +237,7 @@ hg_19_Bins.gr
     ##   -------
     ##   seqinfo: 24 sequences from hg19 genome
 
-### 3.6 DNASeqsForPattern
+### 3.5 DNASeqsForPattern
 
 #### **Description**
 
@@ -340,7 +279,7 @@ DNA_seqs
     ## [51] "GCCC" "TTTG" "ATCT" "CCTA" "GTCC" "TCTG" "ACTT" "CTCA" "GCTC" "TTCG"
     ## [61] "ATTT" "CCCA" "GTTC" "TCCG"
 
-### 3.7 createDir_delIfExists
+### 3.6 createDir_delIfExists
 
 #### **Description**
 
@@ -377,7 +316,7 @@ dir.exists('testDir')
 
     ## [1] TRUE
 
-### 3.8 context_oligonucsCounts
+### 3.7 context_oligonucsCounts
 
 #### **Description**
 
@@ -431,7 +370,7 @@ oligonucs.Counts
     ##  727231  685228  649772 1325123
     
     
-### 3.9 Gbin_ByCGcnts
+### 3.8 Gbin_ByCGcnts
 
 #### **Description**
 
@@ -482,7 +421,7 @@ hg_19_CpGBins.gr
     #  seqinfo: 24 sequences from hg19 genome
     
     
-### 3.10 largeVariables
+### 3.9 largeVariables
 
 #### **Description**
 
@@ -512,7 +451,7 @@ largeVariables(n=5)
 ```
 
 
-### 3.11 makeTracks_of_grangesList
+### 3.10 makeTracks_of_grangesList
 
 #### **Description**
 

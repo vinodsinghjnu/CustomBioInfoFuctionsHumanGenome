@@ -14,7 +14,7 @@
 
 
 largeVariables=function(n=3){
-  m.df=gdata::ll() # return a dataframe that consists of a variable name as rownames, and class and size (in KB) as columns
+  m.df=ll() # return a dataframe that consists of a variable name as rownames, and class and size (in KB) as columns
   #subset(ll(), KB > 1000) # list of object that have over 1000 KB
   Mem.df=m.df[order(m.df$KB),] # sort by the size (ascending)
   Mem.df$GB=Mem.df$KB/10^6
